@@ -90,6 +90,8 @@
 &kp LC(T)   &kp LG(LS(LEFT_ARROW))  &kp LC(TAB)     &kp LG(LS(RIGHT))  &kp LS(LC(T))                    &kp RC(RS(V))  &kp RC(X)  &kp RC(K)  &kp RC(Y)             &kp RC(COLON)
 &trans      &trans                  &none           &trans             &kp SPACE      &trans    &trans  &kp ENTER      &trans     &none      &kp RC(RS(TILDE))     &kp RC(SEMICOLON)
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
         layer_4 {
@@ -110,6 +112,19 @@
 &trans  &trans  &trans  &trans  &trans                         &kp RC(RS(T))  &trans           &trans             &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp PAGE_UP  &kp PAGE_DOWN  &none            &trans             &trans  &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp LC(PLUS) LC(MINUS)>;
+        };
+
+        layer_6 {
+            bindings = <
+&kp LG(L)      &kp LG(M)           &kp LG(UP_ARROW)  &kp LG(R)      &kp LG(E)                           &kp F1   &kp F2   &kp F3   &kp F4  &kp F5
+&kp LG(LS(S))  &kp LG(LEFT_ARROW)  &kp LG(DOWN)      &kp LG(RIGHT)  &kp LA(ENTER)                       &kp F6   &kp F7   &kp F8   &kp F9  &kp F10
+&kp LG(X)      &kp LG(LS(M))       &kp LG(V)         &kp LG(A)      &kp LG(N)                           &kp F11  &kp F12  &kp F13  &trans  &trans
+&trans         &trans              &trans            &trans         &trans         &kp LC(I)    &trans  &trans   &trans   &trans   &trans  &trans
+            >;
+
+            label = "Function";
         };
     };
 };
