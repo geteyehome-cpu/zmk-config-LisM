@@ -30,7 +30,7 @@ layers:
   - M
   - ','
   - .
-  - QUESTION
+  - /
   - {t: SEMI, h: Device Layer}
   - ':'
   - Ctl+CAPS
