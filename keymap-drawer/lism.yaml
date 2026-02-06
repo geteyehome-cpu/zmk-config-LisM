@@ -166,7 +166,7 @@ layers:
   - {t: ▽, type: trans}
   - SPACE
   - {type: held}
-  - {t: ▽, type: trans}
+  - RIGHT SHIFT
   - ENTER
   - {t: ▽, type: trans}
   - ''
