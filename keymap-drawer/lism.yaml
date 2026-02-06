@@ -16,7 +16,7 @@ layers:
   - {t: D, h: LSHIFT}
   - {t: F, h: LGUI}
   - {t: G, h: LCTRL}
-  - {t: N, h: RCTRL}
+  - {t: H, h: RCTRL}
   - {t: J, h: RGUI}
   - {t: K, h: RIGHT SHIFT}
   - {t: L, h: RIGHT ALT}
