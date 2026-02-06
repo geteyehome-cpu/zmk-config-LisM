@@ -258,3 +258,46 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  Function:
+  - Gui+L
+  - Gui+M
+  - Gui+UP ARROW
+  - Gui+R
+  - Gui+E
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - Gui+Sft+S
+  - Gui+LEFT ARROW
+  - Gui+↓
+  - Gui+→
+  - Alt+ENTER
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - Gui+X
+  - Gui+Sft+M
+  - Gui+V
+  - Gui+A
+  - Gui+N
+  - F11
+  - F12
+  - F13
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Ctl+I
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
