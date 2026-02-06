@@ -33,7 +33,7 @@ layers:
   - /
   - {t: SEMI, h: Device Layer}
   - ':'
-  - Ctl+CAPS
+  - {t: Mouse Layer, h: toggle}
   - Sft+Gui+4
   - {t: SPACE, h: Number Layer}
   - {t: Sft+CAPSLOCK, h: Allow Layer}
@@ -50,7 +50,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Ctl+W
-  - Ctl+PAGE DOWN
+  - Ctl+PAGE UP
   - Ctl+PAGE DOWN
   - Ctl+T
   - {t: ▽, type: trans}
