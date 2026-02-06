@@ -103,7 +103,6 @@
         };
 
         layer_5 {
-            status = "reserved";
             display-name = "Scroll  Layer";
             bindings = <
 &trans  &trans  &trans  &trans  &trans                         &kp RC(W)      &kp RC(PAGE_UP)  &kp RC(PAGE_DOWN)  &trans  &trans
