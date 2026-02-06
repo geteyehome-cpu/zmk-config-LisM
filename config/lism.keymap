@@ -78,8 +78,6 @@
 &kp N0     &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3  &kp PERIOD                      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp NON_US_BACKSLASH
 &trans     &kp EQUAL     &kp UNDERSCORE  &trans        &trans        &trans    &trans  &trans            &none              &trans          &trans                &kp PIPE
             >;
-
-            sensor-bindings = <&encoder_kp C_VOL_UP C_VOL_DN>;
         };
 
         layer_3 {
