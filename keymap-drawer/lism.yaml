@@ -38,7 +38,7 @@ layers:
   - {t: SPACE, h: Number Layer}
   - {t: Sft+CAPSLOCK, h: Allow Layer}
   - {t: BS, h: Allow Layer}
-  - {t: ENTER, h: Mouse Layer}
+  - {t: ENTER, h: Function}
   - Sft+Gui+4
   - SQT
   - TAB
@@ -296,7 +296,7 @@ layers:
   - {t: ▽, type: trans}
   - Ctl+I
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
