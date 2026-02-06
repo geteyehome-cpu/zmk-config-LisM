@@ -111,16 +111,5 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &kp PAGE_UP  &kp PAGE_DOWN  &trans           &trans             &trans  &trans
             >;
         };
-
-        layer_6 {
-            status = "reserved";
-            display-name = "Brank Layer";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
     };
 };
