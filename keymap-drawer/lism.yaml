@@ -33,7 +33,7 @@ layers:
   - /
   - {t: SEMI, h: Device Layer}
   - ':'
-  - {t: Mouse Layer, h: toggle}
+  - Ctl+CAPS
   - Sft+Gui+4
   - {t: SPACE, h: Number Layer}
   - {t: Sft+CAPSLOCK, h: Allow Layer}
