@@ -225,7 +225,7 @@ layers:
   - Ctl+PAGE UP
   - Ctl+PAGE DOWN
   - {type: held}
-  - {t: ▽, type: trans}
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
