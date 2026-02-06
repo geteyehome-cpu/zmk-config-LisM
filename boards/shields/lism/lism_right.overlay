@@ -1,9 +1,4 @@
-/* lism_right.overlay */
-
 #include "lism.dtsi"
-
-// スクロール用レイヤーの番号（keymapのlayer_5）
-#define L_SCROLL 5
 
 &transform_42keymap {
     col-offset = <5>;
@@ -11,24 +6,4 @@
 
 &transform_40keymap {
     col-offset = <5>;
-};
-
-/* ===== 右トラックボールをレイヤー条件付きでスクロール化 ===== */
-
-/ {
-    // 新しいリスナーをルート直下に定義
-    scroll_listener: scroll_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball_split>; // dtsi内の名称に合わせる
-
-        /* SCROLL レイヤー(5)のときだけ有効 */
-        layers = <L_SCROLL>;
-
-        input-processors = <
-            // 移動量をスクロール量に変換（感度は 1/12 に調整）
-            &zip_xy_scaler 1 12
-            // XY移動をホイールスクロールへマッピング
-            &zip_xy_to_scroll_mapper
-        >;
-    };
 };
