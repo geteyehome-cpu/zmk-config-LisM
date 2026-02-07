@@ -160,7 +160,7 @@ layers:
   - Ctl+K
   - Ctl+Y
   - 'Ctl+:'
-  - {t: ▽, type: trans}
+  - ''
   - {t: ▽, type: trans}
   - ''
   - {t: ▽, type: trans}
