@@ -33,15 +33,15 @@ layers:
   - /
   - {t: SEMI, h: Device Layer}
   - ':'
-  - {t: Mouse Layer, h: toggle}
+  - TAB
   - Sft+Gui+4
   - {t: SPACE, h: Number Layer}
   - {t: Sft+CAPSLOCK, h: Allow Layer}
   - {t: BS, h: Allow Layer}
   - {t: ENTER, h: Function}
   - Sft+Gui+4
-  - SQT
   - TAB
+  - SQT
   - DEL
   Mouse Layer:
   - {t: ▽, type: trans}
