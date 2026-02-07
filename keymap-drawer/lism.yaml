@@ -9,7 +9,7 @@ layers:
   - Y
   - U
   - I
-  - O
+  - {t: O, h: Number Layer}
   - P
   - A
   - {t: S, h: LALT}
@@ -95,7 +95,7 @@ layers:
   - LCTRL
   - '&'
   - '~'
-  - (
+  - {t: (, type: held}
   - )
   - /
   - '4'
@@ -121,7 +121,7 @@ layers:
   - '='
   - UNDERSCORE
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
