@@ -107,7 +107,7 @@
 &kp LG(L)      &kp LG(M)           &kp LG(UP_ARROW)  &kp LG(R)      &kp LG(E)                           &kp F1   &kp F2   &kp F3   &kp F4  &kp F5
 &kp LG(LS(S))  &kp LG(LEFT_ARROW)  &kp LG(DOWN)      &kp LG(RIGHT)  &kp LA(ENTER)                       &kp F6   &kp F7   &kp F8   &kp F9  &kp F10
 &kp LG(X)      &kp LG(LS(M))       &kp LG(V)         &kp LG(A)      &kp LG(N)                           &kp F11  &kp F12  &kp F13  &trans  &trans
-&kp LA(F4)     &trans              &trans            &trans         &trans         &kp LC(I)    &trans  &trans   &trans   &trans   &trans  &trans
+&kp LA(F4)     &trans              &trans            &trans         &trans         &kp LC(I)    &trans  &trans   &trans   &trans   &trans  &none
             >;
 
             label = "Function";
