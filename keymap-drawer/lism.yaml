@@ -92,7 +92,7 @@ layers:
   - '8'
   - '9'
   - +
-  - LCTRL
+  - ^
   - '&'
   - '~'
   - {t: (, type: held}
