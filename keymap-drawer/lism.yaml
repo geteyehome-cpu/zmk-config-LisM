@@ -52,7 +52,7 @@ layers:
   - Ctl+W
   - Ctl+PAGE UP
   - Ctl+PAGE DOWN
-  - Ctl+T
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&mkp MB5'
   - {t: ▽, type: trans}
@@ -63,7 +63,7 @@ layers:
   - '&mkp MB1'
   - '&mkp MB2'
   - {type: held}
-  - {t: ▽, type: trans}
+  - Ctl+T
   - '&mkp MB4'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -83,7 +83,7 @@ layers:
   - PAGE UP
   - PAGE DOWN
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   Number Layer:
@@ -126,8 +126,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
-  - {t: ▽, type: trans}
   - ''
+  - {t: ▽, type: trans}
   - '|'
   Allow Layer:
   - ESCAPE
@@ -160,11 +160,11 @@ layers:
   - Ctl+K
   - Ctl+Y
   - 'Ctl+:'
-  - ''
   - {t: ▽, type: trans}
-  - ''
   - {t: ▽, type: trans}
-  - SPACE
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
   - RIGHT SHIFT
   - Ctl+I
@@ -255,6 +255,6 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
   - {t: ▽, type: trans}
   - ''
