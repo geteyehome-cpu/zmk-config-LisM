@@ -167,7 +167,7 @@ layers:
   - SPACE
   - {type: held}
   - RIGHT SHIFT
-  - Sft+I
+  - Ctl+I
   - {t: ▽, type: trans}
   - ''
   - Ctl+Sft+~
