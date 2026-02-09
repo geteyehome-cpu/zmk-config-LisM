@@ -63,10 +63,10 @@
         layer_1 {
             display-name = "Mouse Layer";
             bindings = <
-&trans    &trans  &trans  &trans  &trans                         &kp LC(W)      &kp RC(PAGE_UP)  &kp LC(PAGE_DOWN)  &kp RC(T)  &trans
-&mkp MB5  &trans  &trans  &trans  &trans                         &mkp MB3       &mkp MB1         &mkp MB2           &trans     &trans
-&mkp MB4  &trans  &trans  &trans  &trans                         &kp RS(RC(T))  &mkp MB4         &mkp MB5           &trans     &trans
-&trans    &trans  &trans  &trans  &trans  &trans    &kp PAGE_UP  &kp PAGE_DOWN  &trans           &trans             &trans     &trans
+&trans    &trans  &trans  &trans  &trans                         &kp LC(W)      &kp RC(PAGE_UP)  &kp LC(PAGE_DOWN)  &trans  &trans
+&mkp MB5  &trans  &trans  &trans  &trans                         &mkp MB3       &mkp MB1         &mkp MB2           &trans  &kp RC(T)
+&mkp MB4  &trans  &trans  &trans  &trans                         &kp RS(RC(T))  &mkp MB4         &mkp MB5           &trans  &trans
+&trans    &trans  &trans  &trans  &trans  &trans    &kp PAGE_UP  &kp PAGE_DOWN  &trans           &none              &trans  &trans
             >;
         };
 
@@ -76,7 +76,7 @@
 &kp MINUS  &kp NUMBER_7  &kp NUMBER_8    &kp NUMBER_9  &kp PLUS                        &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
 &kp SLASH  &kp NUMBER_4  &kp N5          &kp NUMBER_6  &kp ASTERISK                    &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
 &kp N0     &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3  &kp PERIOD                      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp NON_US_BACKSLASH
-&trans     &kp EQUAL     &kp UNDERSCORE  &trans        &trans        &trans    &trans  &trans            &none              &trans          &none                 &kp PIPE
+&trans     &kp EQUAL     &kp UNDERSCORE  &trans        &trans        &trans    &trans  &trans            &none              &none           &trans                &kp PIPE
             >;
         };
 
@@ -86,7 +86,7 @@
 &kp ESCAPE  &kp LC(PAGE_UP)         &kp UP_ARROW    &kp LC(PAGE_DOWN)  &kp LC(W)                                 &kp RC(A)      &kp RC(F)  &kp RC(L)  &kp RS(RC(NUMBER_1))  &kp RA(EQUAL)
 &kp HOME    &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT          &kp END                                   &kp RC(V)      &kp RC(C)  &kp RC(S)  &kp RC(Z)             &kp RC(RS(NUMBER_4))
 &kp LC(T)   &kp LG(LS(LEFT_ARROW))  &kp LC(TAB)     &kp LG(LS(RIGHT))  &kp LS(LC(T))                             &kp RC(RS(V))  &kp RC(X)  &kp RC(K)  &kp RC(Y)             &kp RC(COLON)
-&none       &trans                  &none           &trans             &kp SPACE      &trans    &kp RIGHT_SHIFT  &kp LC(I)      &trans     &none      &kp RC(RS(TILDE))     &kp RC(SEMICOLON)
+&trans      &trans                  &trans          &trans             &trans         &trans    &kp RIGHT_SHIFT  &kp LC(I)      &trans     &none      &kp RC(RS(TILDE))     &kp RC(SEMICOLON)
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -107,7 +107,7 @@
 &kp LG(L)      &kp LG(M)           &kp LG(UP_ARROW)  &kp LG(R)      &kp LG(E)                           &kp F1   &kp F2   &kp F3   &kp F4  &kp F5
 &kp LG(LS(S))  &kp LG(LEFT_ARROW)  &kp LG(DOWN)      &kp LG(RIGHT)  &kp LA(ENTER)                       &kp F6   &kp F7   &kp F8   &kp F9  &kp F10
 &kp LG(X)      &kp LG(LS(M))       &kp LG(V)         &kp LG(A)      &kp LG(N)                           &kp F11  &kp F12  &kp F13  &trans  &trans
-&kp LA(F4)     &trans              &trans            &trans         &trans         &kp LC(I)    &trans  &trans   &trans   &trans   &trans  &none
+&kp LA(F4)     &trans              &trans            &trans         &trans         &kp LC(I)    &trans  &trans   &trans   &none    &trans  &none
             >;
 
             label = "Function";
