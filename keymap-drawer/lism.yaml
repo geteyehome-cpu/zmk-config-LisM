@@ -19,8 +19,8 @@ layers:
   - {t: H, h: RCTRL}
   - {t: J, h: RGUI}
   - {t: K, h: RIGHT SHIFT}
-  - {t: L, h: RIGHT ALT}
-  - {t: '-', h: Mouse Layer}
+  - {t: L, h: Mouse Layer}
+  - '-'
   - Z
   - X
   - C
@@ -62,8 +62,8 @@ layers:
   - '&mkp MB3'
   - '&mkp MB1'
   - '&mkp MB2'
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - '&mkp MB4'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
