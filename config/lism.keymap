@@ -54,7 +54,7 @@
 &kp Q       &kp W       &kp E         &kp R           &kp T                                             &kp Y        &kp U           &kp I              &lt 2 O  &kp P
 &kp A       &mt LALT S  &mt LSHIFT D  &mt LGUI F      &mt LCTRL G                                       &mt RCTRL H  &mt RGUI J      &mt RIGHT_SHIFT K  &lt 1 L  &kp MINUS
 &kp Z       &kp X       &kp C         &kp V           &kp B                                             &kp N        &kp M           &kp COMMA          &kp DOT  &kp SLASH
-&lt 4 SEMI  &kp COLON   &kp TAB       &kp LS(LG(N4))  &lt 2 SPACE  &lt 3 LS(CAPSLOCK)    &kp BACKSPACE  &lt 5 ENTER  &kp LS(LG(N4))  &tog 1             &kp SQT  &kp DELETE
+&lt 4 SEMI  &kp COLON   &kp TAB       &kp LS(LG(N4))  &lt 2 SPACE  &lt 3 LS(CAPSLOCK)    &kp BACKSPACE  &lt 5 ENTER  &kp LS(LG(N4))  &kp TAB            &kp SQT  &kp DELETE
             >;
 
             sensor-bindings = <&encoder_msc SCRL_UP SCRL_DOWN>;
