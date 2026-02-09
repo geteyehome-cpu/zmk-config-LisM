@@ -40,7 +40,7 @@ layers:
   - BS
   - {t: ENTER, h: Function}
   - Sft+Gui+4
-  - {t: Mouse Layer, h: toggle}
+  - TAB
   - SQT
   - DEL
   Mouse Layer:
