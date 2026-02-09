@@ -86,7 +86,7 @@
 &kp ESCAPE  &kp LC(PAGE_UP)         &kp UP_ARROW    &kp LC(PAGE_DOWN)  &kp LC(W)                                 &kp RC(A)      &kp RC(F)  &kp RC(L)  &kp RS(RC(NUMBER_1))  &kp RA(EQUAL)
 &kp HOME    &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT          &kp END                                   &kp RC(V)      &kp RC(C)  &kp RC(S)  &kp RC(Z)             &kp RC(RS(NUMBER_4))
 &kp LC(T)   &kp LG(LS(LEFT_ARROW))  &kp LC(TAB)     &kp LG(LS(RIGHT))  &kp LS(LC(T))                             &kp RC(RS(V))  &kp RC(X)  &kp RC(K)  &kp RC(Y)             &kp RC(COLON)
-&none       &trans                  &none           &trans             &kp SPACE      &trans    &kp RIGHT_SHIFT  &kp LS(I)      &trans     &none      &kp RC(RS(TILDE))     &kp RC(SEMICOLON)
+&none       &trans                  &none           &trans             &kp SPACE      &trans    &kp RIGHT_SHIFT  &kp LC(I)      &trans     &none      &kp RC(RS(TILDE))     &kp RC(SEMICOLON)
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
