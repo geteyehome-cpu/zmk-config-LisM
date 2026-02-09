@@ -54,7 +54,7 @@ layers:
   - Ctl+PAGE DOWN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&mkp MB5'
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -64,7 +64,7 @@ layers:
   - '&mkp MB2'
   - {type: held}
   - Ctl+T
-  - '&mkp MB4'
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -79,7 +79,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - DEL
   - PAGE UP
   - PAGE DOWN
   - {t: ▽, type: trans}
