@@ -53,7 +53,7 @@ layers:
   - Ctl+PAGE UP
   - Ctl+PAGE DOWN
   - Ctl+T
-  - ''
+  - {t: ▽, type: trans}
   - '&mkp MB5'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
