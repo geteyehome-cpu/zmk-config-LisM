@@ -111,7 +111,7 @@
             >;
 
             label = "Function";
-            sensor-bindings = <&inc_dec_kp LC(PLUS) LC(MINUS)>;
+            sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(MINUS)>;
         };
     };
 };
