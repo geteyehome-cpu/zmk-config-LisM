@@ -78,6 +78,8 @@
 &kp N0     &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3  &kp PERIOD                      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp NON_US_BACKSLASH
 &trans     &kp EQUAL     &kp UNDERSCORE  &trans        &trans        &trans    &trans  &trans            &none              &none           &trans                &kp PIPE
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         layer_3 {
@@ -88,8 +90,6 @@
 &kp LC(T)   &kp LG(LS(LEFT_ARROW))  &kp LC(TAB)     &kp LG(LS(RIGHT))  &kp LS(LC(T))                             &kp RC(RS(V))  &kp RC(X)  &kp RC(K)  &kp RC(Y)             &kp RC(COLON)
 &trans      &trans                  &trans          &trans             &trans         &trans    &kp RIGHT_SHIFT  &kp LC(I)      &trans     &none      &kp RC(RS(TILDE))     &kp RC(SEMICOLON)
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
         layer_4 {
