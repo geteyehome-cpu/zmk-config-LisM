@@ -42,7 +42,7 @@ layers:
   - Sft+Gui+4
   - TAB
   - SQT
-  - DEL
+  - '"'
   Mouse Layer:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -79,7 +79,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - DEL
+  - {t: ▽, type: trans}
   - PAGE UP
   - PAGE DOWN
   - {t: ▽, type: trans}
@@ -123,7 +123,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - DEL
   - {t: ▽, type: trans}
   - ''
   - ''
