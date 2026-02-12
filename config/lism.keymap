@@ -63,10 +63,10 @@
         layer_1 {
             display-name = "Mouse Layer";
             bindings = <
-&trans  &trans  &trans  &trans  &trans                         &kp LC(W)      &kp RC(PAGE_UP)  &kp LC(PAGE_DOWN)  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                         &mkp MB3       &mkp MB1         &mkp MB2           &trans  &kp RC(T)
-&trans  &trans  &trans  &trans  &trans                         &kp RS(RC(T))  &mkp MB4         &mkp MB5           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp PAGE_UP  &kp PAGE_DOWN  &trans           &none              &trans  &trans
+&trans  &trans  &trans  &trans     &trans                            &kp LC(W)      &kp RC(PAGE_UP)  &kp LC(PAGE_DOWN)  &trans  &trans
+&trans  &trans  &trans  &kp LC(C)  &kp LC(V)                         &mkp MB3       &mkp MB1         &mkp MB2           &trans  &kp RC(T)
+&trans  &trans  &trans  &trans     &trans                            &kp RS(RC(T))  &mkp MB4         &mkp MB5           &trans  &trans
+&trans  &trans  &trans  &trans     &trans     &trans    &kp PAGE_UP  &kp PAGE_DOWN  &trans           &none              &trans  &trans
             >;
         };
 
@@ -85,10 +85,10 @@
         layer_3 {
             display-name = "Allow Layer";
             bindings = <
-&kp ESCAPE  &kp LC(PAGE_UP)         &kp UP_ARROW    &kp LC(PAGE_DOWN)  &kp LC(W)                                 &kp RC(A)      &kp RC(F)  &kp RC(L)  &kp RS(RC(NUMBER_1))  &kp RA(EQUAL)
-&kp HOME    &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT          &kp END                                   &kp RC(V)      &kp RC(C)  &kp RC(S)  &kp RC(Z)             &kp RC(RS(NUMBER_4))
-&kp LC(T)   &kp LG(LS(LEFT_ARROW))  &kp LC(TAB)     &kp LG(LS(RIGHT))  &kp LS(LC(T))                             &kp RC(RS(V))  &kp RC(X)  &kp RC(K)  &kp RC(Y)             &kp RC(COLON)
-&trans      &trans                  &trans          &trans             &trans         &trans    &kp RIGHT_SHIFT  &kp LC(I)      &trans     &none      &kp RC(RS(TILDE))     &kp RC(SEMICOLON)
+&kp ESCAPE  &kp LC(PAGE_UP)         &kp UP_ARROW    &kp LC(PAGE_DOWN)  &kp LC(W)                                 &kp RC(A)       &kp RC(F)    &kp RC(L)  &kp RS(RC(NUMBER_1))  &kp RA(EQUAL)
+&kp HOME    &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT          &kp END                                   &kp RS(INSERT)  &kp RC(INS)  &kp RC(S)  &kp RC(Z)             &kp RC(RS(NUMBER_4))
+&kp LC(T)   &kp LG(LS(LEFT_ARROW))  &kp LC(TAB)     &kp LG(LS(RIGHT))  &kp LS(LC(T))                             &kp RC(RS(V))   &kp RC(X)    &kp RC(K)  &kp RC(Y)             &kp RC(COLON)
+&trans      &trans                  &trans          &trans             &trans         &trans    &kp RIGHT_SHIFT  &kp LC(I)       &trans       &none      &kp RC(RS(TILDE))     &kp RC(SEMICOLON)
             >;
         };
 
