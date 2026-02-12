@@ -57,8 +57,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Ctl+C
+  - Ctl+V
   - '&mkp MB3'
   - '&mkp MB1'
   - '&mkp MB2'
@@ -145,8 +145,8 @@ layers:
   - DOWN ARROW
   - →
   - END
-  - Ctl+V
-  - Ctl+C
+  - Sft+INSERT
+  - Ctl+INS
   - Ctl+S
   - Ctl+Z
   - Ctl+Sft+4
