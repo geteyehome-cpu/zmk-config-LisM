@@ -1,3 +1,4 @@
+#include <input/processors/runtime-input-processor.dtsi>
 &spi0 {
     status = "okay";
 
