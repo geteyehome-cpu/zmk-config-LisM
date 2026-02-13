@@ -2,6 +2,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: cormoran                            # ← 追加
+      url-base: https://github.com/cormoran     # ← 追加
     - name: sekigon-gonnoc
       url-base: https://github.com/sekigon-gonnoc
     - name: caksoylar
@@ -9,10 +11,27 @@ manifest:
     - name: 4mplelab
       url-base: https://github.com/4mplelab
   projects:
+    # ZMK: cormoranフォーク（DYA Studio用）
     - name: zmk
-      remote: zmkfirmware
-      revision: v0.3.0
+      remote: cormoran                          # ← zmkfirmware → cormoran
+      revision: v0.3-branch+dya                 # ← v0.3.0 → v0.3-branch+dya
       import: app/west.yml
+
+    # DYA Studio モジュール（4つ追加）
+    - name: zmk-module-ble-management
+      remote: cormoran
+      revision: main
+    - name: zmk-module-battery-history
+      remote: cormoran
+      revision: main
+    - name: zmk-module-settings-rpc
+      remote: cormoran
+      revision: main
+    - name: zmk-module-runtime-input-processor
+      remote: cormoran
+      revision: main
+
+    # 既存モジュール（変更なし）
     - name: zmk-driver-paw3222
       remote: sekigon-gonnoc
       revision: main
