@@ -2,8 +2,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: cormoran                            # ← 追加
-      url-base: https://github.com/cormoran     # ← 追加
+    - name: cormoran
+      url-base: https://github.com/cormoran
     - name: sekigon-gonnoc
       url-base: https://github.com/sekigon-gonnoc
     - name: caksoylar
@@ -13,8 +13,8 @@ manifest:
   projects:
     # ZMK: cormoranフォーク（DYA Studio用）
     - name: zmk
-      remote: cormoran                          # ← zmkfirmware → cormoran
-      revision: v0.3-branch+dya                 # ← v0.3.0 → v0.3-branch+dya
+      remote: cormoran
+      revision: v0.3-branch+dya
       import: app/west.yml
 
     # DYA Studio モジュール（4つ追加）
