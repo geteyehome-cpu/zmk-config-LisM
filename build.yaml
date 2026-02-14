@@ -24,12 +24,12 @@ include:
   - board: seeeduino_xiao_ble
     shield: lism_right rgbled_adapter
     artifact-name: lism_right_central_non_trackball_studio
-    snippet: "studio-rpc-ble non-trackball-central"
+    snippet: "studio-rpc-usb-uart non-trackball-central"
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
   - board: seeeduino_xiao_ble
     shield: lism_right rgbled_adapter
     artifact-name: lism_right_central_trackball_studio
-    snippet: "studio-rpc-ble trackball-central"
+    snippet: "studio-rpc-usb-uart trackball-central"
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
 
 # Central = Left
