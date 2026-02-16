@@ -1,6 +1,6 @@
+#include <input/processors/runtime-input-processor.dtsi>
 &spi0 {
     status = "okay";
-
     trackball_central: trackball@1 {
         status = "okay";
         compatible = "pixart,paw3222";
@@ -9,23 +9,25 @@
         irq-gpios = <&xiao_d 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
     };
 };
-
 // ペリフェラル（split経由）のリスナーを有効化
 &peripheral_listener {
     status = "okay";
+    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT) &mouse_runtime_input_processor>;  
+    // input-processors = 
+    //         <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
+    //         <&mouse_runtime_input_processor>,
+    //         <&scroll_runtime_input_processor>;
 };
-
 // セントラルのリスナーを有効化し、deviceを紐付け
 &central_listener {
     status = "okay";
     device = <&trackball_central>;
     input-processors = 
-        <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
-
-    scroller {
-        layers = <2>;
-        input-processors = 
-            <&zip_xy_to_scroll_mapper>,
-            <&zip_scroll_scaler 1 16>;
-    };
+        <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT) 
+         &mouse_runtime_input_processor>;
+};
+&scroll_runtime_input_processor {
+        x-codes = <INPUT_REL_X>;
+        y-codes = <INPUT_REL_Y>;
+        xy-to-scroll-enabled;
 };
