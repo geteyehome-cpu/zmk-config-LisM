@@ -112,11 +112,11 @@
             status = "reserved";
             display-name = "Win Layer";
             bindings = <
-&trans  &trans  &trans  &trans  &kp A                     &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans                    &trans  &trans  &trans
+&kp Z  &kp Z  &kp Z  &kp Z   &kp Z                   &kp Z   &kp Z     &kp Z  &kp Z  &kp Z
+&kp Z  &kp Z  &kp Z  &kp N4  &kp N6                  &kp N0  &kp LBKT  &kp R  &kp Q  &kp W
+&kp W  &kp W  &kp W  &kp W   &kp W                   &kp W   &kp W     &kp W  &kp W  &kp W
+&kp E  &kp S  &kp S  &kp S   &kp S   &kp S    &kp S  &kp S   &kp S     &kp S  &kp S  &kp S
+              &kp X  &kp X   &kp X                   &kp X   &kp X     &kp X
             >;
         };
 
@@ -134,6 +134,28 @@
 
         layer_7 {
             status = "reserved";
+            display-name = "Brank Layer";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans                    &trans  &trans  &trans
+            >;
+        };
+
+        layer_8 {
+            display-name = "Brank Layer";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans                    &trans  &trans  &trans
+            >;
+        };
+
+        layer_9 {
             display-name = "Brank Layer";
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
