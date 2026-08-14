@@ -1,23 +1,20 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 200
 
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors/runtime-sensor-rotate.dtsi>
 #include <behaviors/default_layer.dtsi>
 #include <dt-bindings/zmk_behavior_default_layer/default_layer.h>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &mt {
     tapping-term-ms = <300>;
     flavor = "balanced";
 };
 
-&lt {
-    quick-tap-ms = <300>;
-};
-
+&lt { quick-tap-ms = <300>; };
 
 / {
     macros {
@@ -25,10 +22,13 @@
             compatible = "zmk,behavior-macro";
             label = "EMOJI";
             #binding-cells = <0>;
-            bindings = 
-                <&macro_press &kp CAPSLOCK>,
-                <&macro_tap &kp E>,
-                <&macro_release &kp CAPSLOCK>;
+            bindings =
+                <&macro_press>,
+                <&kp CAPSLOCK>,
+                <&macro_tap>,
+                <&kp E>,
+                <&macro_release>,
+                <&kp CAPSLOCK>;
         };
     };
 
@@ -54,81 +54,71 @@
         default_layer {
             display-name = "Default Layer";
             bindings = <
-                &kp Q            &kp W              &kp E                 &kp R                   &kp T                                                  &kp Y          &kp U            &kp I              &kp O               &kp P
-                &kp A            &mt LALT S         &mt LSHIFT D          &mt LGUI F              &mt LCTRL G                                            &mt RCTRL H    &mt RGUI J       &mt RSHIFT K       &mt RALT L          &lt 3 SEMICOLON
-                &kp Z            &kp X              &kp C                 &kp V                   &kp B                                                  &kp N          &kp M            &kp COMMA          &kp DOT             &kp SLASH
-                &lt 4 DELETE     &tog 1             &lt 1 TAB             &msc SCRL_UP            &lt 2 SPACE       &lt 3 ESC           &lt 3 BACKSPACE  &lt 2 ENTER    &msc SCRL_UP     &kp F7             &kp F10             &lt 4 F12 
-                                                    &msc SCRL_LEFT        &msc SCRL_DOWN          &msc SCRL_RIGHT                                        &msc SCRL_LEFT &msc SCRL_DOWN   &msc SCRL_RIGHT
+&kp Q    &lt 5 W    &kp E    &kp R    &kp T    &kp Y    &kp U    &lt 3 I    &lt 2 O    &kp P
+                &lt 1 A    &kp S    &mt LEFT_SHIFT D    &mt LEFT_ALT F    &mt LEFT_CONTROL G    &mt RIGHT_CONTROL H    &mt RIGHT_ALT J    &mt RIGHT_SHIFT K    &lt 1 L    &kp MINUS
+                &kp Z    &kp X    &kp C    &kp V    &kp B    &kp N    &kp M    &kp COMMA    &kp PERIOD    &kp SLASH
+                &lt 4 TAB    &kp SQT    &kp SEMICOLON    &msc 100    &lt 2 SPACE    &lt 3 GRAVE    &kp BACKSPACE    &lt 5 RETURN    &none    &none
+                &kp RIGHT_GUI    &kp 537329799    &msc 4288413696    &msc 65436    &msc 6553600    &none    &none    &none
             >;
+
             sensor-bindings = <&rsr_scrl &rsr_scrl>;
         };
 
         layer_1 {
             display-name = "Mouse Layer";
             bindings = <
-                &trans           &trans             &trans                &trans                  &trans                                                 &kp SPACE      &kp RG(LEFT)     &kp RG(RIGHT)      &mkp MB3            &trans
-                &mkp MB5         &trans             &trans                &trans                  &trans                                                 &kp LG(UP)     &mkp MB1         &mkp MB2           &msc SCRL_UP        &msc SCRL_DOWN
-                &mkp MB4         &trans             &trans                &trans                  &trans                                                 &kp LG(DOWN)   &kp LEFT         &kp UP             &kp RIGHT           &trans
-                &trans           &trans             &trans                &trans                  &trans            &trans              &trans           &trans         &trans           &kp DOWN           &trans              &kp LG(W)
-                                                    &trans                &trans                  &trans                                                 &trans         &trans           &trans
+&trans    &trans    &kp 17235993    &kp 17235974    &trans    &kp 17235994    &kp 268894283    &kp 268894286    &trans    &trans
+                &trans    &trans    &trans    &trans    &trans    &mkp MB3    &mkp MB1    &mkp MB2    &trans    &kp 268894231
+                &trans    &trans    &trans    &trans    &trans    &kp 805765143    &mkp MB4    &mkp MB5    &trans    &trans
+                &trans    &trans    &trans    &kp 34013266    &kp 17236054    &kp 17236055    &kp PAGE_UP    &kp PAGE_DOWN    &trans    &trans
+                &trans    &trans    &kp 34013264    &kp 34013265    &kp 34013263    &trans    &trans    &trans
             >;
         };
 
         layer_2 {
             display-name = "Number Layer";
             bindings = <
-                &trans           &kp NUMBER_7       &kp NUMBER_8          &kp NUMBER_9            &kp EQUAL                                              &kp F1         &kp F2           &kp F7             &kp F10             &kp RSHIFT
-                &kp ASTERISK     &mt LALT NUMBER_4  &mt LSHIFT NUMBER_5   &mt LGUI NUMBER_6       &mt LCTRL MINUS                                        &mkp MB1       &kp LEFT         &kp UP             &kp RIGHT           &kp RGUI
-                &kp SLASH        &kp NUMBER_1       &kp NUMBER_2          &kp NUMBER_3            &kp PLUS                                               &mkp MB2       &none            &kp DOWN           &none               &kp RALT
-                &trans           &kp DOT            &kp NUMBER_0          &kp UP                  &kp LANG2         &trans              &trans           &kp LANG1      &kp UP           &kp RS(RC(TAB))    &kp RC(TAB)         &kp F12 
-                                                    &kp LEFT              &kp DOWN                &kp RIGHT                                              &kp LEFT       &kp DOWN         &kp RIGHT
+&kp MINUS    &kp N7    &kp N8    &kp N9    &kp 34013235    &kp 537329699    &kp 537329700    &kp 537329695    &kp 537329701    &kp 537329702
+                &kp SLASH    &kp N4    &kp N5    &kp N6    &kp 34013236    &kp 537329694    &kp LEFT_BRACKET    &kp 537329696    &kp 537329697    &kp 537329698
+                &kp N0    &kp N1    &kp N2    &kp N3    &kp PERIOD    &kp RIGHT_BRACKET    &kp NON_US_HASH    &kp 537329712    &kp 537329714    &kp INT1
+                &kp EQUAL    &kp 34013230    &kp 34013229    &kp C_VOLUME_UP    &kp 34013258    &kp 34013261    &kp DELETE    &kp ESCAPE    &trans    &trans
+                &trans    &kp 34013321    &kp 34013258    &kp C_VOLUME_DOWN    &kp 34013261    &trans    &trans    &trans
             >;
+
             sensor-bindings = <&encoder_kp C_VOL_UP C_VOL_DN>;
         };
 
         layer_3 {
-            display-name = "Mark Layer";
+            display-name = "Arrow Layer";
             bindings = <
-                &kp LS(LG(N4))   &kp F4             &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS   &none                                                  &kp TILDE      &kp EXCLAMATION  &kp AT_SIGN        &kp HASH            &kp DOLLAR
-                &emoji           &kp F5             &kp LEFT_BRACKET      &kp RIGHT_BRACKET       &none                                                  &kp GRAVE      &kp UNDER        &kp SINGLE_QUOTE   &kp DOUBLE_QUOTES   &kp BACKSLASH
-                &kp KP_NUMLOCK   &kp F11            &kp LEFT_BRACE        &kp RIGHT_BRACE         &none                                                  &kp PIPE       &kp PERCENT      &kp CARET          &kp AMPERSAND       &kp ASTERISK
-                &trans           &trans             &kp NUMBER_0          &trans                  &kp SPACE         &trans              &trans           &kp ENTER      &trans           &none              &none               &kp F12 
-                                                    &trans                &trans                  &trans                                                 &trans         &trans           &trans
+&kp 134676554    &kp 17236043    &kp 17236011    &kp 17236046    &kp 17235994    &kp 268894212    &kp 268894217    &kp 268894223    &kp 268894219    &kp 1074200622
+                &kp HOME    &kp 168230992    &kp 67567698    &kp 168230991    &kp END    &kp 537329737    &kp 268894281    &kp 268894230    &kp 268894237    &kp 805765153
+                &kp 17235991    &kp 67567696    &kp 67567697    &kp 67567695    &kp 50790423    &kp 805765145    &kp 268894235    &kp 268894222    &kp 268894236    &kp 805765171
+                &kp 168230937    &kp INS    &kp 168230994    &kp UP    &kp 17236042    &kp 17236045    &kp 537329734    &kp 268894220    &trans    &trans
+                &kp 84344902    &kp 268894259    &kp LEFT    &kp DOWN    &kp RIGHT    &trans    &trans    &trans
             >;
         };
 
         layer_4 {
             display-name = "Device Layer";
             bindings = <
-                &none            &none              &none                 &none                   &bt BT_CLR                                             &bt BT_SEL 0   &bt BT_SEL 1     &bt BT_SEL 2       &bt BT_SEL 3        &bt BT_SEL 4
-                &none            &none              &none                 &none                   &none                                                  &none          &none            &none              &none               &none
-                &sys_reset       &none              &none                 &none                   &none                                                  &none          &none            &none              &none               &sys_reset
-                &bootloader      &bt BT_CLR_ALL     &none                 &none                   &none             &none               &studio_unlock   &none          &none            &none              &none               &bootloader
-                                                    &trans                &trans                  &trans                                                 &trans         &trans           &trans
+&none    &none    &none    &none    &bt BT_CLR    &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4
+                &none    &none    &none    &none    &none    &none    &none    &none    &none    &none
+                &sys_reset    &none    &none    &none    &none    &none    &none    &none    &none    &sys_reset
+                &none    &none    &none    &kp 151453703    &kp 34013228    &kp 34013241    &studio_unlock    &none    &none    &none
+                &none    &none    &kp 151453776    &kp 151453757    &kp 151453775    &trans    &trans    &trans
             >;
         };
 
         layer_5 {
             status = "reserved";
-            display-name = "Brank Layer";
+            display-name = "Win Layer";
             bindings = <
-                &trans           &trans             &trans                &trans                  &trans                                                 &trans       &trans           &trans             &trans              &trans
-                &trans           &trans             &trans                &trans                  &trans                                                 &trans       &trans           &trans             &trans              &trans
-                &trans           &trans             &trans                &trans                  &trans                                                 &trans       &trans           &trans             &trans              &trans
-                &trans           &trans             &trans                &trans                  &trans            &trans              &trans           &trans       &trans           &trans             &trans              &trans
-                                                    &trans                &trans                  &trans                                                 &trans       &trans           &trans
-            >;
-        };
-
-        layer_6 {
-            status = "reserved";
-            display-name = "Brank Layer";
-            bindings = <
-                &trans           &trans             &trans                &trans                  &trans                                                 &trans       &trans           &trans             &trans              &trans
-                &trans           &trans             &trans                &trans                  &trans                                                 &trans       &trans           &trans             &trans              &trans
-                &trans           &trans             &trans                &trans                  &trans                                                 &trans       &trans           &trans             &trans              &trans
-                &trans           &trans             &trans                &trans                  &trans            &trans              &trans           &trans       &trans           &trans             &trans              &trans
-                                                    &trans                &trans                  &trans                                                 &trans       &trans           &trans
+&kp 134676495    &kp 134676487    &kp 134676554    &kp 134676501    &kp 134676488    &kp F1    &kp F2    &kp F3    &kp F4    &kp F5
+                &kp 168230934    &kp 134676509    &kp 134676505    &kp 34013251    &kp 151453778    &kp F6    &kp F7    &kp F8    &kp F9    &kp F10
+                &kp 134676507    &kp 134676492    &kp 134676535    &kp 134676484    &kp 134676497    &kp F11    &kp F12    &kp 805765150    &kp 268894259    &kp 268894260
+                &kp 67567677    &kp 67567660    &kp 50790441    &kp 134676562    &kp 67567656    &kp 84344875    &kp 805765137    &kp 268894225    &trans    &trans
+                &kp 805765154    &kp 805765153    &kp 134676560    &kp 134676561    &kp 134676559    &trans    &trans    &trans
             >;
         };
 
@@ -136,13 +126,12 @@
             status = "reserved";
             display-name = "Brank Layer";
             bindings = <
-                &trans           &trans             &trans                &trans                  &trans                                                 &trans       &trans           &trans             &trans              &trans
-                &trans           &trans             &trans                &trans                  &trans                                                 &trans       &trans           &trans             &trans              &trans
-                &trans           &trans             &trans                &trans                  &trans                                                 &trans       &trans           &trans             &trans              &trans
-                &trans           &trans             &trans                &trans                  &trans            &trans              &trans           &trans       &trans           &trans             &trans              &trans
-                                                    &trans                &trans                  &trans                                                 &trans       &trans           &trans
+&trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
+                &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
+                &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
+                &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
+                &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
             >;
         };
     };
-
 };
