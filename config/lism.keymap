@@ -31,6 +31,64 @@
                 <&macro_release>,
                 <&kp CAPSLOCK>;
         };
+
+        excle_auto_ajustcolumn: excle_auto_ajustcolumn_macro {
+            compatible = "zmk,behavior-macro";
+            label = "Excle_Auto-AjustColumn";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap &kp LALT>,
+                <&macro_tap &kp H>,
+                <&macro_tap &kp O>,
+                <&macro_tap &kp I>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+        /* Restored from Abyss backup "LisM — 2026-08-11" (version 9).
+         * timeout-ms is not recorded in that backup; 50ms is ZMK's stock
+         * default and assumed here -- adjust in Studio if it feels off. */
+        combo_0 {
+            timeout-ms = <50>;
+            key-positions = <26 27>;
+            bindings = <&kp RS(RC(N8))>;
+        };
+        combo_1 {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp RS(RC(N7))>;
+        };
+        combo_2 {
+            timeout-ms = <50>;
+            key-positions = <3 4>;
+            bindings = <&kp LC(N4)>;
+        };
+        combo_3 {
+            timeout-ms = <50>;
+            key-positions = <13 14>;
+            bindings = <&kp LC(N5)>;
+        };
+        combo_4 {
+            timeout-ms = <50>;
+            key-positions = <6 7>;
+            bindings = <&kp RS(RC(N6))>;
+        };
+        combo_5 {
+            timeout-ms = <50>;
+            key-positions = <7 8>;
+            bindings = <&kp RS(RC(INT1))>;
+        };
+        combo_6 {
+            timeout-ms = <50>;
+            key-positions = <5 6>;
+            bindings = <&kp C_VOL_UP>;
+        };
+        combo_7 {
+            timeout-ms = <50>;
+            key-positions = <25 26>;
+            bindings = <&kp C_VOL_DN>;
+        };
     };
 
     behaviors {
@@ -56,10 +114,10 @@
             display-name = "Default Layer";
             bindings = <
                 &kp Q    &lt 5 W    &kp E    &kp R    &kp T    &kp Y    &kp U    &lt 3 I    &lt 2 O    &kp P
-                &lt 1 A    &kp S    &mt LEFT_SHIFT D    &mt LEFT_ALT F    &mt LEFT_CONTROL G    &mt RIGHT_CONTROL H    &mt RIGHT_ALT J    &mt RIGHT_SHIFT K    &lt 1 L    &kp MINUS
-                &kp Z    &kp X    &kp C    &kp V    &kp B    &kp N    &kp M    &kp COMMA    &kp PERIOD    &kp SLASH
-                &lt 4 TAB    &kp SQT    &kp SEMICOLON    &msc MOVE_Y(100)    &lt 2 SPACE    &lt 3 GRAVE    &kp BACKSPACE    &lt 5 RETURN    &none    &none
-                &kp RIGHT_GUI    &kp RS(INT1)    &msc MOVE_X(-100)    &msc MOVE_Y(-100)    &msc MOVE_X(100)    &none    &none    &none
+                &lt 1 A    &kp S    &mt LSHIFT D    &mt LALT F    &mt LCTRL G    &mt RCTRL H    &mt RALT J    &mt RSHIFT K    &lt 1 L    &kp MINUS
+                &kp Z    &kp X    &kp C    &kp V    &kp B    &kp N    &kp M    &kp COMMA    &kp DOT    &kp SLASH
+                &lt 4 TAB    &kp SQT    &kp SEMICOLON    &msc SCRL_UP    &lt 2 SPACE    &lt 3 GRAVE    &kp BACKSPACE    &lt 5 ENTER    &none    &none
+                &kp RGUI    &lt 4 RS(INT1)    &msc SCRL_LEFT    &msc SCRL_DOWN    &msc SCRL_RIGHT    &none    &none    &none
             >;
 
             sensor-bindings = <&rsr_scrl &rsr_scrl>;
@@ -68,11 +126,11 @@
         layer_1 {
             display-name = "Mouse Layer";
             bindings = <
-                &trans    &trans    &kp LC(V)    &kp LC(C)    &trans    &kp LC(W)    &kp RC(PAGE_UP)    &kp RC(PAGE_DOWN)    &trans    &trans
-                &trans    &trans    &trans    &trans    &trans    &mkp MB3    &mkp MB1    &mkp MB2    &trans    &kp RC(T)
-                &trans    &trans    &trans    &trans    &trans    &kp RC(RS(T))    &mkp MB4    &mkp MB5    &trans    &trans
-                &trans    &trans    &trans    &kp LS(UP)    &kp LC(KP_MINUS)    &kp LC(KP_PLUS)    &kp PAGE_UP    &kp PAGE_DOWN    &trans    &trans
-                &trans    &trans    &kp LS(LEFT)    &kp LS(DOWN)    &kp LS(RIGHT)    &trans    &trans    &trans
+                &kp LS(LC(X))    &kp LA(Q)    &kp LC(V)    &kp LC(C)    &kp LC(N1)    &kp LC(W)    &kp RC(PAGE_UP)    &kp RC(PAGE_DOWN)    &kp RC(SPACE)    &kp LS(SPACE)
+                &kp LCTRL    &trans    &kp LS(LC(N2))    &kp LS(LC(N1))    &kp LC(N2)    &mkp MB3    &mkp MB1    &mkp MB2    &kp RCTRL    &kp RC(T)
+                &trans    &trans    &kp LA(PAGE_UP)    &kp LA(PAGE_DOWN)    &kp LC(N3)    &kp RS(RC(M))    &mkp MB4    &mkp MB5    &trans    &kp LS(LC(O))
+                &kp LA(LS(N4))    &studio_unlock    &kp LA(LS(MINUS))    &kp LS(UP)    &kp LS(HOME)    &kp LS(END)    &kp RA(RC(LEFT))    &kp RA(RC(RIGHT))    &trans    &trans
+                &trans    &kp RA(RC(DELETE))    &kp LS(LEFT)    &kp LS(DOWN)    &kp LS(RIGHT)    &trans    &trans    &trans
             >;
         };
 
@@ -82,8 +140,8 @@
                 &kp MINUS    &kp N7    &kp N8    &kp N9    &kp LS(SEMICOLON)    &kp RS(N6)    &kp RS(N7)    &kp RS(N2)    &kp RS(N8)    &kp RS(N9)
                 &kp SLASH    &kp N4    &kp N5    &kp N6    &kp LS(SQT)    &kp RS(N1)    &kp LEFT_BRACKET    &kp RS(N3)    &kp RS(N4)    &kp RS(N5)
                 &kp N0    &kp N1    &kp N2    &kp N3    &kp PERIOD    &kp RIGHT_BRACKET    &kp NON_US_HASH    &kp RS(RIGHT_BRACKET)    &kp RS(NON_US_HASH)    &kp INT1
-                &kp EQUAL    &kp LS(EQUAL)    &kp LS(MINUS)    &kp C_VOLUME_UP    &kp LS(HOME)    &kp LS(END)    &kp DELETE    &kp ESCAPE    &trans    &trans
-                &trans    &kp LS(INT3)    &kp LS(HOME)    &kp C_VOLUME_DOWN    &kp LS(END)    &trans    &trans    &trans
+                &kp EQUAL    &kp LS(EQUAL)    &kp LS(MINUS)    &kp LA(UP)    &kp LC(KP_MINUS)    &kp LC(KP_PLUS)    &kp DELETE    &kp ESC    &trans    &trans
+                &kp RC(N0)    &kp LS(INT3)    &kp LA(LEFT)    &kp LA(DOWN)    &kp LA(RIGHT)    &trans    &trans    &trans
             >;
 
             sensor-bindings = <&encoder_kp C_VOL_UP C_VOL_DN>;
@@ -92,11 +150,11 @@
         layer_3 {
             display-name = "Arrow Layer";
             bindings = <
-                &kp LG(HOME)    &kp LC(PAGE_UP)    &kp LC(TAB)    &kp LC(PAGE_DOWN)    &kp LC(W)    &kp RC(A)    &kp RC(F)    &kp RC(L)    &kp RC(H)    &kp RA(EQUAL)
-                &kp HOME    &kp LS(LG(LEFT))    &kp LA(UP)    &kp LS(LG(RIGHT))    &kp END    &kp RS(INS)    &kp RC(INS)    &kp RC(S)    &kp RC(Z)    &kp RC(RS(N4))
-                &kp LC(T)    &kp LA(LEFT)    &kp LA(DOWN)    &kp LA(RIGHT)    &kp LC(LS(T))    &kp RC(RS(V))    &kp RC(X)    &kp RC(K)    &kp RC(Y)    &kp RC(RS(SEMICOLON))
-                &kp LS(LG(V))    &kp INS    &kp LS(LG(UP))    &kp UP    &kp LC(HOME)    &kp LC(END)    &kp RS(PRINTSCREEN)    &kp RC(I)    &trans    &trans
-                &kp LC(LA(PRINTSCREEN))    &kp RC(SEMICOLON)    &kp LEFT    &kp DOWN    &kp RIGHT    &trans    &trans    &trans
+                &kp LG(HOME)    &kp LC(PAGE_UP)    &kp LC(TAB)    &kp LC(PAGE_DOWN)    &kp LC(W)    &kp RC(A)    &kp RC(F)    &kp RC(L)    &kp RC(H)    &kp RC(N)
+                &kp HOME    &kp LG(LS(LEFT))    &kp LS(LC(C))    &kp LG(LS(RIGHT))    &kp END    &kp RS(INS)    &kp RC(INS)    &kp RC(S)    &kp RC(Z)    &kp RS(RC(N))
+                &kp LC(T)    &kp LC(J)    &kp LC(E)    &kp LC(R)    &kp LS(LC(T))    &kp RS(RC(V))    &kp RC(X)    &kp RC(K)    &kp RC(Y)    &kp RC(D)
+                &kp LG(LS(V))    &kp INS    &kp LC(G)    &kp UP    &kp LC(HOME)    &kp LC(END)    &kp RS(PSCRN)    &kp RC(I)    &trans    &trans
+                &kp LA(LC(PSCRN))    &kp RC(PSCRN)    &kp LEFT    &kp DOWN    &kp RIGHT    &trans    &trans    &trans
             >;
         };
 
@@ -104,10 +162,10 @@
             display-name = "Device Layer";
             bindings = <
                 &none    &none    &none    &none    &bt BT_CLR    &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4
-                &none    &none    &none    &none    &none    &none    &none    &none    &none    &none
-                &sys_reset    &none    &none    &none    &none    &none    &none    &none    &none    &sys_reset
-                &none    &none    &none    &kp LC(LG(D))    &kp LS(SPACE)    &kp LS(CAPSLOCK)    &studio_unlock    &none    &none    &none
-                &none    &none    &kp LC(LG(LEFT))    &kp LC(LG(F4))    &kp LC(LG(RIGHT))    &trans    &trans    &trans
+                &none    &none    &none    &none    &none    &kp LC(F4)    &none    &none    &none    &none
+                &sys_reset    &none    &none    &none    &none    &kp RC(W)    &none    &none    &none    &sys_reset
+                &bootloader    &none    &none    &kp LG(LC(D))    &kp LS(SPACE)    &kp LS(CAPSLOCK)    &studio_unlock    &none    &none    &none
+                &none    &bootloader    &kp LG(LC(LEFT))    &kp LG(LC(F4))    &kp LG(LC(RIGHT))    &trans    &trans    &trans
             >;
         };
 
@@ -115,15 +173,14 @@
             display-name = "Win Layer";
             bindings = <
                 &kp LG(L)    &kp LG(D)    &kp LG(HOME)    &kp LG(R)    &kp LG(E)    &kp F1    &kp F2    &kp F3    &kp F4    &kp F5
-                &kp LS(LG(S))    &kp LG(Z)    &kp LG(V)    &kp LS(F10)    &kp LC(LG(UP))    &kp F6    &kp F7    &kp F8    &kp F9    &kp F10
-                &kp LG(X)    &kp LG(I)    &kp LG(PERIOD)    &kp LG(A)    &kp LG(N)    &kp F11    &kp F12    &kp RC(RS(N1))    &kp RC(SEMICOLON)    &kp RC(SQT)
-                &kp LA(F4)    &kp LA(SPACE)    &kp LC(LS(ESCAPE))    &kp LG(UP)    &kp LA(RETURN)    &kp LC(LA(TAB))    &kp RC(RS(N))    &kp RC(N)    &trans    &trans
-                &kp RC(RS(N5))    &kp RC(RS(N4))    &kp LG(LEFT)    &kp LG(DOWN)    &kp LG(RIGHT)    &trans    &trans    &trans
+                &kp LG(LS(S))    &kp LG(Z)    &kp LG(V)    &kp LS(F10)    &kp LG(LC(UP))    &kp F6    &kp F7    &kp F8    &kp F9    &kp F10
+                &kp LG(X)    &kp LG(I)    &kp LG(DOT)    &kp LG(A)    &kp LG(N)    &kp F11    &kp F12    &kp RS(RC(N5))    &kp RS(RC(N1))    &kp RS(RC(N4))
+                &kp LA(F4)    &kp LG(LA(SPACE))    &kp LS(LC(ESC))    &kp LG(UP)    &kp LA(ENTER)    &kp LA(LC(TAB))    &kp RC(SEMICOLON)    &kp RC(SQT)    &trans    &trans
+                &kp RS(RC(N3))    &kp RS(RC(EQUAL))    &kp LG(LEFT)    &kp LG(DOWN)    &kp LG(RIGHT)    &trans    &trans    &trans
             >;
         };
 
         layer_7 {
-            status = "reserved";
             display-name = "Brank Layer";
             bindings = <
                 &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
